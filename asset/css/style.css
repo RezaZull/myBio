@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Quicksand&display=swap');
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'IBM Plex Sans', sans-serif;
+    background-color: #F9F5F2;
+    color: #474642;
+}
+header{
+    display: flex;
+    padding-inline: 1rem;
+    position: sticky;
+    top: 0;
+    background-color: #F9F5F2;
+    align-items: center;
+}
+header h1{
+    font-size: 2rem;
+    flex: 1;
+}
+header nav{
+    flex: 1;
+}
+header nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+header nav ul li a{
+    font-size: 1.2rem;
+    transition: .5s;
+}
+header nav ul li:hover a{
+    text-shadow: 0 0 1px black;
+    color: #000;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+article {
+    padding-inline: 10%;
+}
+#home{
+    height: 100%;
+}
+#home #homeBanner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    gap: 2rem;
+}
+#homeBanner .textWrap,#homeBanner .image{
+    flex: 1;
+}
+#homeBanner .image{
+    display: flex;
+    align-items: center;
+}
+#homeBanner .image img{
+    width: 100%;
+}
+#homeBanner .textWrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+.textWrap p, .textWrap h2{
+    margin-block: 0.5rem;
+}
+#homeBanner .textWrap p{
+    font-size: 1.5rem;
+}
+#homeBanner .textWrap h2{
+    font-size: 5rem;
+    color: #282826;
+}
+u{
+    text-decoration-color:#474642;
+}
+.btn{
+    padding: .7rem 1.2rem;
+    border: .2rem solid black;
+    border-radius: 30px;
+    box-shadow: 2px 3px black;
+    font-weight: bold;
+    display: inline-block;
+}
+.homeBtn{
+    background-color: #F7CB46;
+}
+section{
+    text-align: justify;
+    margin-bottom: 2rem;
+}
+#about{
+    font-size: 1.2rem;
+}
+.contentWrap{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-evenly;
+}
+.contentWrap img{
+    max-height: 400px;
+}
+.card{
+    padding: .7rem 1.2rem;
+    border: .3rem solid black;
+    border-radius: 30px;
+    box-shadow: 10px 16px black;
+    background-color: #fff;
+}
+.contentWrap .text{
+    margin: auto;
+}
+.text.card table tr td{
+    padding: 0.5rem;
+}
+.text.card h2{
+    border-bottom: 0.2rem solid;
+}
+#pendidikan .contentWrap .card{
+    max-width: 500px;
+    min-width: 200px;
+}
+#skill .contentWrap .card .contentWrap ul{
+    list-style: none;
+}
+#skill .contentWrap .card .contentWrap ul li progress{
+    height: 1.7rem;
+}
+.SoftSkill ul{
+    margin: auto;
+}
+#pendidikan .contentWrap .card h4,#pendidikan .contentWrap .card p,#pendidikan .contentWrap .card h5{
+    margin-block: 1rem;
+}
+#pendidikan .contentWrap .card h4{
+    font-size: 1.3rem;
+}
+.projectWrap{
+    display: flex;
+    overflow: auto;
+}
+.projectWrap .card{
+    margin-inline-end: 4rem;
+}
+#porto{
+    background-color: #A388EE;
+}
+#porto h3{
+    color: #F9F5F2;
+}
+#porto .projectWrap .card{
+    background-color: #F7CB46;
+}
+#porto .projectWrap h4,#porto .projectWrap p{
+    margin-block: .5rem;
+}
+#porto .projectWrap h4{
+    font-size: 1.6rem;
+}
+#porto .projectWrap .card img{
+    /* height: 350px; */
+    width: 100%;
+    border: .2rem solid black;
+    border-radius: 5px;
+    box-shadow: 2px 3px black;
+}
+#pengalaman{
+    background-color: #90EE90;
+}
+#pengalaman h3{
+    color: #000;
+}
+#pengalaman .contentWrap .card h5,#pengalaman .contentWrap .card p,#pengalaman .contentWrap .card h4{
+    margin-block: .5rem;
+}
+#pengalaman .contentWrap .card h4{
+    font-size: 1.6rem;
+}
+.title{
+    text-decoration: underline;
+    text-decoration-color: #474642;
+    font-size: 2rem;
+}
+#project .card h3{
+    font-size: 1.8rem;
+    font-weight: bolder;
+}
+.softskillWrap{
+    gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.softskillWrap .cardItem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.softskillWrap .cardItem img{
+    width: 5rem;
+}
+.softskillWrap .cardItem p{
+   font-size: 1.2rem;
+   font-weight: bolder;
+}
+#burgerMenu{
+    display: none;
+    background:none;
+    border: none;
+}
+@media (max-width: @screen-sm-max) {
+    #homeBanner,.contentWrap{
+        flex-direction: column;
+    }
+    #homeBanner{
+        margin-block: 4rem;
+    }
+    #about img{
+        display: none;
+    }
+    .projectWrap .card{
+        min-width: 60vw;
+    }
+    nav{
+        display: flex;
+        text-align: right;
+        flex-direction: column;
+        align-items: end;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+    nav button img{
+        height: 2rem;
+    }
+    nav ul{
+        background-color: #F9F5F2;
+        padding: 1rem;
+        flex-direction: column;
+        gap: 1rem;
+        display: none;
+    }
+    #burgerMenu{
+        display: block;
+    }
+}
